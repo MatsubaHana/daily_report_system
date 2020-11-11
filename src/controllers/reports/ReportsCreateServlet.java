@@ -15,20 +15,20 @@ import javax.servlet.http.HttpServletResponse;
 
 import models.Employee;
 import models.Report;
-import models.validators.ReportValidatorv;
+import models.validators.ReportValidator;
 import utils.DBUtil;
 
 /**
  * Servlet implementation class ReportCreateServlet
  */
 @WebServlet("/reports/create")
-public class ReportCreateServlet extends HttpServlet {
+public class ReportsCreateServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ReportCreateServlet() {
+    public ReportsCreateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -56,7 +56,7 @@ public class ReportCreateServlet extends HttpServlet {
             r.setCreated_at(currentTime);
             r.setUpdated_at(currentTime);
 
-            List<String> errors = ReportValidatorv.validate(r);
+            List<String> errors = ReportValidator.validate(r);
 
             if(errors.size() >0){
                 em.close();

@@ -9,7 +9,7 @@ import models.Report;
  * Servlet implementation class ReportValidatorv
  */
 
-public class ReportValidatorv{
+public class ReportValidator{
     public static List<String> validate(Report r){
         List<String> errors = new ArrayList<String>();
 
