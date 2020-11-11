@@ -54,7 +54,7 @@ public class ReportCreateServlet extends HttpServlet {
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             r.setCreated_at(currentTime);
-            r.setUpdate_at(currentTime);
+            r.setUpdated_at(currentTime);
 
             List<String> errors = ReportValidatorv.validate(r);
 
